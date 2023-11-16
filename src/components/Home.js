@@ -35,7 +35,7 @@ export default function Home() {
     const filteredCompaniesNoP = async (value) => {
         setEntryCompanies([])
         console.log(value);
-        const response = await fetch(`http://51.20.73.62:3001/company/filterNoP?value=${value}`, {
+        const response = await fetch(`https://stocktalkapi.onrender.com/company/filterNoP?value=${value}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -57,7 +57,7 @@ export default function Home() {
         setLoading(true)
         setCompanyArray([])
 
-        const response = await fetch(`http://51.20.73.62:3001/company/filter?page=${page}&value=${value}`, {
+        const response = await fetch(`https://stocktalkapi.onrender.com/company/filter?page=${page}&value=${value}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -77,7 +77,7 @@ export default function Home() {
         setLoading(true)
         setCompanyArray([])
         setSearchCompanyInput('')
-        const response = await fetch(`http://51.20.73.62:3001/company/getCompanies?page=${page}`, {
+        const response = await fetch(`https://stocktalkapi.onrender.com/company/getCompanies?page=${page}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -97,7 +97,7 @@ export default function Home() {
         e.preventDefault()
 
         toast.promise(
-            fetch(`http://51.20.73.62:3001/company/add`, {
+            fetch(`https://stocktalkapi.onrender.com/company/add`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -131,7 +131,7 @@ export default function Home() {
         e.preventDefault()
 
         toast.promise(
-            fetch(`http://51.20.73.62:3001/pricing/setPrice`, {
+            fetch(`https://stocktalkapi.onrender.com/pricing/setPrice`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
