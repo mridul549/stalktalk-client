@@ -8,7 +8,7 @@ export default function Navbar() {
     const handleDownload = async () => {
         try {
             setLoading(true)
-            const response = await fetch('http://localhost:3001/sheet/create'); // Assuming your Express route is mounted at /api
+            const response = await fetch('https://stocktalkapi.onrender.com/sheet/create'); // Assuming your Express route is mounted at /api
             const blob = await response.blob();
             setLoading(false)
             const url = window.URL.createObjectURL(blob);
