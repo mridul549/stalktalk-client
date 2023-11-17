@@ -14,7 +14,6 @@ export default function Home() {
     const [entryForm, setEntryForm] = useState({ companyId: '', companyName: '', esp: '', resultTime: '' })
     const [searchCompanyInput, setSearchCompanyInput] = useState('')
     const [entryCompanies, setEntryCompanies] = useState([])
-    const [entryLoading, setEntryLoading] = useState(false)
 
     const addCompanyModal = () => {
         document.getElementById('addCompanyModal').showModal()
