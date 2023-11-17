@@ -191,11 +191,11 @@ export default function Home() {
     }, [page])
 
     return (
-        <div className='bg-white h-screen m-6 rounded-2xl p-7 drop-shadow-xl'>
+        <div className='bg-white h-max m-6 rounded-2xl p-7 drop-shadow-xl'>
             <div className='head'>
                 <div className='head1'>
                     <div className='searchBar grid grid-cols-3'>
-                        <input value={searchCompanyInput} onChange={searchCompanyOnChange} type="text" className='border rounded-full w-72 p-3 pl-6 focus:outline-gray-400' placeholder='Seach Company' />
+                        <input value={searchCompanyInput} onChange={searchCompanyOnChange} type="text" className='border rounded-full w-72 p-3 pl-6 focus:outline-gray-700' placeholder='Seach Company' />
                         <h1 className='font-bold text-4xl m-auto'>Companies</h1>
                         <div className='ml-auto my-auto'>
                             <button onClick={() => addEntryModal()} className='bg-gray-800 text-white p-2 pl-4 pr-4 rounded-xl transition duration-300 ease-in-out  hover:bg-gray-700 '>Add Entry</button>

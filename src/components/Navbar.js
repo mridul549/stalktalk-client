@@ -29,10 +29,19 @@ export default function Navbar() {
                 <div class="mx-auto px-2 sm:px-6 lg:px-8">
                     <div class="relative h-16 grid grid-cols-3 w-full">
                         <div className='flex mr-auto h-16'>
-                            {loading && < Spinner />}
                         </div>
                         <img class="h-16 w-auto mx-auto" src={logo} alt="Your Company"/>
-                        <button onClick={handleDownload} disabled={loading} className={`ml-auto text-black bg-white text-xl my-auto  h-14 w-40 rounded-xl border-2 ${!loading ? 'hover:text-white hover:bg-transparent': 'bg-gray-300 border-gray-300'}  transition duration-300 ease-in-out`}><i class="fa-regular fa-file-excel fa-xl pr-1"></i> Download</button>
+                        <button onClick={handleDownload} disabled={loading} className={`ml-auto text-black bg-white text-xl my-auto border-white h-14 w-40 rounded-xl border-2 ${!loading ? 'hover:text-white hover:bg-transparent': 'bg-gray-300 border-gray-300'}  transition duration-300 ease-in-out`}>
+                            {loading ? 
+                                <div className='flex h-14 items-center'>
+                                    <Spinner />
+                                </div> :
+                                <>
+                                    <i class="fa-regular fa-file-excel fa-xl pr-2"></i> 
+                                    Download
+                                </>
+                            }
+                        </button>
                     </div>
                 </div>
 
